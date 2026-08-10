@@ -13,9 +13,7 @@ jobs:
       - name: Run shared format and clippy checks
         uses: csaf-rs/shared-workflows/.github/actions/rust-checks@main
         with:
-          run-format: "true"
-          run-clippy: "true"
-          clippy-args: "--locked --all-targets --workspace"
+          clippy-extra-args: "--workspace"
       - name: Prepare targets
         run: |
           rustup target add wasm32-unknown-unknown
