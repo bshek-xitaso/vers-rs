@@ -12,8 +12,6 @@ jobs:
         run: rustup update stable --no-self-update
       - name: Run shared format and clippy checks
         uses: csaf-rs/shared-workflows/.github/actions/rust-checks@main
-        with:
-          clippy-extra-args: "--workspace"
       - name: Prepare targets
         run: |
           rustup target add wasm32-unknown-unknown
