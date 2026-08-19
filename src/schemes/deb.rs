@@ -16,7 +16,7 @@ macro_rules! deb_format_error {
     };
 }
 
-/// Debian version according to dpkg version format: [epoch:]upstream[-debian]
+/// Debian version according to dpkg version format: `[epoch:]upstream[-debian]`
 ///
 /// This implementation follows Debian Policy version comparison rules:
 /// - Epoch numeric (default 0)
