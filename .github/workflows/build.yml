@@ -39,3 +39,6 @@ jobs:
           wasm-pack build --out-dir pkg --scope csaf-rs
           cd pkg
           npm pack --dry-run
+
+  coverage:
+    uses: csaf-rs/shared-workflows/.github/workflows/rust-coverage.yml@400ee021e6bdeb7e2808264749e2fe20b25401e8 # v1.3.0
