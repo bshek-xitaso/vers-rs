@@ -26,8 +26,8 @@ jobs:
         run: cargo build --workspace --no-default-features --verbose
       - name: Build wasm target
         run: cargo build --locked --workspace --target wasm32-unknown-unknown --verbose
-      - name: Cargo publish dry-run
-        run: cargo publish --locked --dry-run
+      - name: Publish dry-run
+        uses: csaf-rs/shared-workflows/.github/actions/cargo-publish-dry-run@56bcf77399696052c9eb925a6059c77c1eaab1bc # v1.6.0
       - name: Set up Node
         uses: actions/setup-node@v7
         with:
